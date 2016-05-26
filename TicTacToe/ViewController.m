@@ -11,15 +11,6 @@
 @interface ViewController ()
 //Board values. 0=none, 1=first player, 2=second player
 @property NSMutableArray* boardValues;
-@property (weak, nonatomic) IBOutlet UIButton *button1;
-@property (weak, nonatomic) IBOutlet UIButton *button2;
-@property (weak, nonatomic) IBOutlet UIButton *button3;
-@property (weak, nonatomic) IBOutlet UIButton *button4;
-@property (weak, nonatomic) IBOutlet UIButton *button5;
-@property (weak, nonatomic) IBOutlet UIButton *button6;
-@property (weak, nonatomic) IBOutlet UIButton *button7;
-@property (weak, nonatomic) IBOutlet UIButton *button8;
-@property (weak, nonatomic) IBOutlet UIButton *button9;
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
 @property bool firstPlayersTurn;
 @property NSArray* winningSets;
@@ -73,20 +64,23 @@
         else if ([set isSubsetOfSet:oSpots])
             return @"PLAYER 2";
     }
+    if (xSpots.count + oSpots.count == 9)
+        return @"Tie";
     return @"No";
 }
 
 - (void)winAlert:(NSString *)winner{
-    if (![winner isEqualToString:@"No"]) {
-        UIAlertController *win = [UIAlertController alertControllerWithTitle:@"WINNER!" message:[NSString stringWithFormat:@"%@ Wins! Congratulations!",winner] preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *startOver = [UIAlertAction actionWithTitle:@"New Game?" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [self resetBoard];
-        }];
-        [win addAction:startOver];
-        [self presentViewController:win animated:YES completion:nil];
+    UIAlertController* resultMessage = [UIAlertController alertControllerWithTitle:@"Tie" message:@"You both suck!" preferredStyle:UIAlertControllerStyleAlert];
+
+    if (![winner isEqualToString:@"Tie"]){
+        resultMessage = [UIAlertController alertControllerWithTitle:@"WINNER!" message:[NSString stringWithFormat:@"%@ Wins! Congratulations!",winner] preferredStyle:UIAlertControllerStyleAlert];
     }
     
+    UIAlertAction *startOver = [UIAlertAction actionWithTitle:@"New Game?" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self resetBoard];
+        }];
+    [resultMessage addAction:startOver];
+    [self presentViewController:resultMessage animated:YES completion:nil];
 }
 
 - (void)resetBoard{
@@ -107,9 +101,10 @@
 }
 
 - (IBAction)onButtonPushed:(UIButton *)sender {
-    int boardIndex = [sender.restorationIdentifier integerValue];
+    NSInteger boardIndex = [sender.restorationIdentifier integerValue];
     if (self.firstPlayersTurn) {
         [self.boardValues replaceObjectAtIndex:boardIndex withObject:@1];
+        [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [sender setTitle:@"x" forState:UIControlStateNormal];
         self.whichPlayerLabel.text = @"o";
         self.whichPlayerLabel.textColor = [UIColor redColor];
@@ -122,7 +117,9 @@
         self.whichPlayerLabel.textColor = [UIColor blueColor];
     }
     NSLog(@"%@",self.boardValues);
-    [self winAlert:[self whoWon]];
+    NSString* winMessage = [self whoWon];
+    if (![winMessage isEqualToString:@"No"])
+          [self winAlert:winMessage];
     self.firstPlayersTurn = !self.firstPlayersTurn;
 }
 
