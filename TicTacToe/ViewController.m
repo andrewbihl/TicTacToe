@@ -76,6 +76,35 @@
     return @"No";
 }
 
+- (void)winAlert:(NSString *)winner{
+    if (![winner isEqualToString:@"No"]) {
+        UIAlertController *win = [UIAlertController alertControllerWithTitle:@"WINNER!" message:[NSString stringWithFormat:@"%@ Wins! Congratulations!",winner] preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *startOver = [UIAlertAction actionWithTitle:@"New Game?" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self resetBoard];
+        }];
+        [win addAction:startOver];
+        [self presentViewController:win animated:YES completion:nil];
+    }
+    
+}
+
+- (void)resetBoard{
+    [self.button1 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button2 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button3 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button4 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button5 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button6 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button7 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button8 setTitle:@"" forState:(UIControlStateNormal)];
+    [self.button9 setTitle:@"" forState:(UIControlStateNormal)];
+
+    self.boardValues = [NSMutableArray arrayWithObjects:@0,@0,@0,@0,@0,@0,@0,@0,@0,nil];
+    self.firstPlayersTurn = true;
+    self.whichPlayerLabel.text = @"x";
+    self.whichPlayerLabel.textColor = [UIColor blueColor];
+}
 
 - (IBAction)onButtonPushed:(UIButton *)sender {
     int boardIndex = [sender.restorationIdentifier integerValue];
@@ -93,7 +122,7 @@
         self.whichPlayerLabel.textColor = [UIColor blueColor];
     }
     NSLog(@"%@",self.boardValues);
-    NSLog(@"%@",[self whoWon]);
+    [self winAlert:[self whoWon]];
     self.firstPlayersTurn = !self.firstPlayersTurn;
 }
 
