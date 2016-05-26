@@ -102,6 +102,8 @@
 
 - (IBAction)onButtonPushed:(UIButton *)sender {
     NSInteger boardIndex = [sender.restorationIdentifier integerValue];
+    if ([[self.boardValues objectAtIndex:boardIndex] integerValue] >0)
+        return;
     if (self.firstPlayersTurn) {
         [self.boardValues replaceObjectAtIndex:boardIndex withObject:@1];
         [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
