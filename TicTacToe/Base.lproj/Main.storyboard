@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,48 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4S-PS-xcS">
-                                <rect key="frame" x="145" y="286" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="V6h-G7-cnA"/>
-                                    <constraint firstAttribute="height" constant="100" id="j2d-kf-WLO"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cyw-yF-BD0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-St-R99">
-                                <rect key="frame" x="145" y="391" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="G80-Dg-m4R"/>
-                                    <constraint firstAttribute="height" constant="100" id="ZLI-vu-2XZ"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xp3-sN-zwc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDp-pJ-fsb">
-                                <rect key="frame" x="145" y="181" width="100" height="100"/>
+                                <rect key="frame" x="145" y="145" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="PmG-ln-wCJ"/>
                                     <constraint firstAttribute="height" constant="100" id="xp6-xZ-itn"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -68,20 +35,20 @@
                                     <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVW-WB-NtK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpV-Wn-aZU">
-                                <rect key="frame" x="282" y="89" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpV-Wn-aZU">
+                                <rect key="frame" x="279" y="89" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adC-MF-D96">
-                                <rect key="frame" x="250" y="285" width="100" height="100"/>
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Cti-nN-3c0"/>
                                     <constraint firstAttribute="height" constant="100" id="LeY-UC-K0o"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -92,13 +59,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u57-jB-bOm">
-                                <rect key="frame" x="250" y="390" width="100" height="100"/>
+                                <rect key="frame" x="250" y="355" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0bQ-Gb-sg8"/>
                                     <constraint firstAttribute="width" constant="100" id="vVp-U5-40q"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -109,13 +76,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ge-Hm-UpR">
-                                <rect key="frame" x="250" y="181" width="100" height="100"/>
+                                <rect key="frame" x="250" y="145" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="7gA-XL-DRQ"/>
                                     <constraint firstAttribute="height" constant="100" id="hek-AN-Mqw"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -126,13 +93,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-PP-OWX">
-                                <rect key="frame" x="355" y="181" width="100" height="100"/>
+                                <rect key="frame" x="355" y="145" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="JBw-b5-Io6"/>
                                     <constraint firstAttribute="width" constant="100" id="tKv-Le-NyG"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -143,13 +110,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hx0-a1-OwW">
-                                <rect key="frame" x="355" y="285" width="100" height="100"/>
+                                <rect key="frame" x="355" y="250" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="fNf-Mh-ad8"/>
                                     <constraint firstAttribute="width" constant="100" id="hva-uJ-UNc"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -160,13 +127,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="8" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoL-Tk-7qZ">
-                                <rect key="frame" x="355" y="390" width="100" height="100"/>
+                                <rect key="frame" x="355" y="355" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="gOu-DX-H4m"/>
                                     <constraint firstAttribute="width" constant="100" id="yqb-QR-NnR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="3"/>
@@ -176,28 +143,99 @@
                                     <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xM-Ld-ete"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-St-R99">
+                                <rect key="frame" x="145" y="355" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="G80-Dg-m4R"/>
+                                    <constraint firstAttribute="height" constant="100" id="ZLI-vu-2XZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xp3-sN-zwc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4S-PS-xcS">
+                                <rect key="frame" x="145" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="V6h-G7-cnA"/>
+                                    <constraint firstAttribute="height" constant="100" id="j2d-kf-WLO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cyw-yF-BD0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56X-x7-DGj" userLabel="marker">
+                                <rect key="frame" x="279" y="482" width="42" height="43"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.083909653127193451" green="0.29266533255577087" blue="0.78102397918701172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SuF-hT-Ixd" appends="YES" id="DmT-GF-ciO"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="adC-MF-D96" firstAttribute="top" secondItem="6ge-Hm-UpR" secondAttribute="bottom" constant="4" id="0ve-uK-HEw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u57-jB-bOm" secondAttribute="bottom" constant="110" id="18L-RN-kgi"/>
+                            <constraint firstItem="adC-MF-D96" firstAttribute="top" secondItem="6ge-Hm-UpR" secondAttribute="bottom" constant="5" id="0ve-uK-HEw"/>
+                            <constraint firstItem="K4S-PS-xcS" firstAttribute="firstBaseline" secondItem="Hx0-a1-OwW" secondAttribute="firstBaseline" id="2bS-8i-eyc"/>
                             <constraint firstItem="F4l-St-R99" firstAttribute="top" secondItem="K4S-PS-xcS" secondAttribute="bottom" constant="5" id="5lK-dk-Ib3"/>
+                            <constraint firstItem="pAL-PP-OWX" firstAttribute="baseline" secondItem="6ge-Hm-UpR" secondAttribute="baseline" id="6Fa-po-vqg"/>
                             <constraint firstItem="NDp-pJ-fsb" firstAttribute="baseline" secondItem="pAL-PP-OWX" secondAttribute="baseline" id="75H-bx-EMM"/>
+                            <constraint firstItem="Hx0-a1-OwW" firstAttribute="top" secondItem="adC-MF-D96" secondAttribute="top" id="761-mE-gAN"/>
                             <constraint firstItem="pAL-PP-OWX" firstAttribute="leading" secondItem="6ge-Hm-UpR" secondAttribute="trailing" constant="5" id="7T8-Nf-mR4"/>
-                            <constraint firstItem="K4S-PS-xcS" firstAttribute="baseline" secondItem="Hx0-a1-OwW" secondAttribute="baseline" constant="1" id="Ahy-Tf-2Y1"/>
+                            <constraint firstItem="56X-x7-DGj" firstAttribute="top" secondItem="u57-jB-bOm" secondAttribute="bottom" constant="27" id="8KF-od-qaW"/>
+                            <constraint firstItem="K4S-PS-xcS" firstAttribute="baseline" secondItem="Hx0-a1-OwW" secondAttribute="baseline" id="Ahy-Tf-2Y1"/>
+                            <constraint firstItem="NDp-pJ-fsb" firstAttribute="firstBaseline" secondItem="6ge-Hm-UpR" secondAttribute="firstBaseline" id="E1l-Qa-Dbd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="56X-x7-DGj" secondAttribute="bottom" constant="75" id="EPz-ar-U3r"/>
+                            <constraint firstItem="K4S-PS-xcS" firstAttribute="firstBaseline" secondItem="adC-MF-D96" secondAttribute="firstBaseline" id="G1f-0i-MLJ"/>
                             <constraint firstItem="u57-jB-bOm" firstAttribute="top" secondItem="adC-MF-D96" secondAttribute="bottom" constant="5" id="IFe-yP-qBx"/>
                             <constraint firstItem="6ge-Hm-UpR" firstAttribute="leading" secondItem="NDp-pJ-fsb" secondAttribute="trailing" constant="5" id="IQ6-El-hfL"/>
+                            <constraint firstItem="NDp-pJ-fsb" firstAttribute="baseline" secondItem="6ge-Hm-UpR" secondAttribute="baseline" id="LRk-Ef-tFO"/>
+                            <constraint firstItem="IoL-Tk-7qZ" firstAttribute="baseline" secondItem="u57-jB-bOm" secondAttribute="baseline" id="Myz-VS-Cot"/>
+                            <constraint firstItem="56X-x7-DGj" firstAttribute="trailing" secondItem="XpV-Wn-aZU" secondAttribute="trailing" id="OJ6-qi-Dwh"/>
+                            <constraint firstItem="Hx0-a1-OwW" firstAttribute="firstBaseline" secondItem="adC-MF-D96" secondAttribute="firstBaseline" id="PdB-SO-d04"/>
+                            <constraint firstItem="IoL-Tk-7qZ" firstAttribute="top" secondItem="u57-jB-bOm" secondAttribute="top" id="R2G-rC-vXA"/>
+                            <constraint firstItem="6ge-Hm-UpR" firstAttribute="top" secondItem="XpV-Wn-aZU" secondAttribute="bottom" constant="35" id="T6d-yq-oLE"/>
+                            <constraint firstItem="F4l-St-R99" firstAttribute="baseline" secondItem="IoL-Tk-7qZ" secondAttribute="baseline" id="T6y-Tx-Ija"/>
                             <constraint firstItem="6ge-Hm-UpR" firstAttribute="leading" secondItem="adC-MF-D96" secondAttribute="leading" id="Ti8-mm-QZL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4l-St-R99" secondAttribute="bottom" constant="109" id="Ut3-QL-VIa"/>
+                            <constraint firstItem="pAL-PP-OWX" firstAttribute="top" secondItem="6ge-Hm-UpR" secondAttribute="top" id="UA8-4O-GSm"/>
                             <constraint firstItem="adC-MF-D96" firstAttribute="leading" secondItem="u57-jB-bOm" secondAttribute="leading" id="VRm-XH-pcq"/>
+                            <constraint firstItem="F4l-St-R99" firstAttribute="firstBaseline" secondItem="IoL-Tk-7qZ" secondAttribute="firstBaseline" id="ZRi-os-2ba"/>
+                            <constraint firstItem="56X-x7-DGj" firstAttribute="leading" secondItem="XpV-Wn-aZU" secondAttribute="leading" id="Zbv-se-qIm"/>
+                            <constraint firstItem="NDp-pJ-fsb" firstAttribute="top" secondItem="6ge-Hm-UpR" secondAttribute="top" id="aLi-c7-ua7"/>
+                            <constraint firstItem="F4l-St-R99" firstAttribute="baseline" secondItem="u57-jB-bOm" secondAttribute="baseline" id="ago-hB-wsb"/>
                             <constraint firstItem="adC-MF-D96" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bYV-0O-lvT"/>
                             <constraint firstItem="pAL-PP-OWX" firstAttribute="leading" secondItem="Hx0-a1-OwW" secondAttribute="leading" id="eC5-eM-7Ub"/>
                             <constraint firstItem="K4S-PS-xcS" firstAttribute="leading" secondItem="F4l-St-R99" secondAttribute="leading" id="gZ7-GY-hGt"/>
+                            <constraint firstItem="NDp-pJ-fsb" firstAttribute="baseline" secondItem="6ge-Hm-UpR" secondAttribute="baseline" id="h4F-jl-2iK"/>
+                            <constraint firstItem="K4S-PS-xcS" firstAttribute="baseline" secondItem="adC-MF-D96" secondAttribute="baseline" id="hjV-0L-bSh"/>
+                            <constraint firstItem="pAL-PP-OWX" firstAttribute="firstBaseline" secondItem="6ge-Hm-UpR" secondAttribute="firstBaseline" id="jZc-PH-1jd"/>
                             <constraint firstItem="Hx0-a1-OwW" firstAttribute="leading" secondItem="IoL-Tk-7qZ" secondAttribute="leading" id="je7-qF-PEV"/>
+                            <constraint firstItem="adC-MF-D96" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lO2-G0-yia"/>
+                            <constraint firstItem="Hx0-a1-OwW" firstAttribute="baseline" secondItem="adC-MF-D96" secondAttribute="baseline" id="mh9-h3-SI4"/>
                             <constraint firstItem="K4S-PS-xcS" firstAttribute="top" secondItem="NDp-pJ-fsb" secondAttribute="bottom" constant="5" id="nwx-Ru-2zZ"/>
-                            <constraint firstItem="6ge-Hm-UpR" firstAttribute="top" secondItem="XpV-Wn-aZU" secondAttribute="bottom" constant="71" id="pNH-HG-wsr"/>
+                            <constraint firstItem="IoL-Tk-7qZ" firstAttribute="firstBaseline" secondItem="u57-jB-bOm" secondAttribute="firstBaseline" id="oAE-w9-ST1"/>
+                            <constraint firstItem="K4S-PS-xcS" firstAttribute="baseline" secondItem="Hx0-a1-OwW" secondAttribute="baseline" id="pWW-Wo-C4a"/>
                             <constraint firstItem="NDp-pJ-fsb" firstAttribute="leading" secondItem="K4S-PS-xcS" secondAttribute="leading" id="sWW-Wm-zoS"/>
-                            <constraint firstItem="F4l-St-R99" firstAttribute="baseline" secondItem="IoL-Tk-7qZ" secondAttribute="baseline" constant="1" id="zct-j1-ZLe"/>
+                            <constraint firstItem="pAL-PP-OWX" firstAttribute="firstBaseline" secondItem="NDp-pJ-fsb" secondAttribute="firstBaseline" id="scd-6C-E21"/>
+                            <constraint firstItem="NDp-pJ-fsb" firstAttribute="baseline" secondItem="pAL-PP-OWX" secondAttribute="baseline" id="utC-cb-lgU"/>
+                            <constraint firstItem="XpV-Wn-aZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xJ5-rI-Pwk"/>
+                            <constraint firstItem="F4l-St-R99" firstAttribute="firstBaseline" secondItem="u57-jB-bOm" secondAttribute="firstBaseline" id="yKg-Ug-ftB"/>
+                            <constraint firstItem="F4l-St-R99" firstAttribute="baseline" secondItem="IoL-Tk-7qZ" secondAttribute="baseline" id="zct-j1-ZLe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -210,10 +248,16 @@
                         <outlet property="button7" destination="F4l-St-R99" id="doC-Pb-t3D"/>
                         <outlet property="button8" destination="u57-jB-bOm" id="xc7-5J-LIg"/>
                         <outlet property="button9" destination="IoL-Tk-7qZ" id="2ET-Gy-L4q"/>
+                        <outlet property="marker" destination="56X-x7-DGj" id="11U-l4-6PI"/>
                         <outlet property="whichPlayerLabel" destination="XpV-Wn-aZU" id="iIg-IN-Kd1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SuF-hT-Ixd">
+                    <connections>
+                        <action selector="dragMarkAction:" destination="BYZ-38-t0r" id="6Mv-OQ-PNV"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="103" y="155"/>
         </scene>
