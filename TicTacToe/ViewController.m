@@ -10,20 +10,13 @@
 #import "AutoPlayer.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *button1;
-@property (weak, nonatomic) IBOutlet UIButton *button2;
-@property (weak, nonatomic) IBOutlet UIButton *button3;
-@property (weak, nonatomic) IBOutlet UIButton *button4;
-@property (weak, nonatomic) IBOutlet UIButton *button5;
-@property (weak, nonatomic) IBOutlet UIButton *button6;
-@property (weak, nonatomic) IBOutlet UIButton *button7;
-@property (weak, nonatomic) IBOutlet UIButton *button8;
-@property (weak, nonatomic) IBOutlet UIButton *button9;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+
 @property BOOL facingAI;
 @property AutoPlayer* ai;
 @property (weak, nonatomic) IBOutlet UILabel *marker;
 @property CGPoint markerCenter;
-@property NSArray* buttons;
+
 //Board values. 0=none, 1=first player, 2=second player
 @property NSMutableArray* boardValues;
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
@@ -40,12 +33,12 @@
     //    UIView* rectView = [[UIView alloc]initWithFrame:rect];
     //    rectView.backgroundColor = [UIColor blackColor];
     //    [self.view addSubview:rectView];
-    
+    NSLog(@"%@",[self.buttons objectAtIndex:0]);
     [super viewDidLoad];
     if (self.facingAI)
         self.ai = [[AutoPlayer alloc]init];
     self.navigationItem.title = @"Tic Tac Toe";
-    self.buttons = [NSArray arrayWithObjects:self.button1,self.button2,self.button3,self.button4,self.button5,self.button6,self. button7,self.button8,self.button9, nil];
+
     self.boardValues = [NSMutableArray arrayWithObjects:@0,@0,@0,@0,@0,@0,@0,@0,@0,nil];
     self.winningSets = [self getSetOfWinningSets];
     [self setTurn:true];
@@ -88,14 +81,15 @@
 
 -(void)evaluateDragFinish:(CGPoint)finishLocation{
     
-    
-    if (finishLocation.x > self.button1.frame.origin.x && finishLocation.x < self.button9.frame.origin.x+self.button9.frame.size.width
-        && finishLocation.y > self.button1.frame.origin.y && finishLocation.y < self.button9.frame.origin.y+self.button9.frame.size.height)
+    UIButton* button1 = [self.buttons objectAtIndex:0];
+    UIButton* button9 = [self.buttons objectAtIndex:8];
+    if (finishLocation.x > button1.frame.origin.x && finishLocation.x < button9.frame.origin.x+button9.frame.size.width
+        && finishLocation.y > button1.frame.origin.y && finishLocation.y < button9.frame.origin.y+button9.frame.size.height)
     {
         int column;
         int row;;
-        if (finishLocation.x > self.button1.frame.origin.x + self.button1.frame.size.width){
-            if (finishLocation.x < self.button9.frame.origin.x)
+        if (finishLocation.x > button1.frame.origin.x + button1.frame.size.width){
+            if (finishLocation.x < button9.frame.origin.x)
                 column = 1;
             else
                 column = 2;
@@ -103,8 +97,8 @@
         else
             column = 0;
         
-        if (finishLocation.y > self.button1.frame.origin.y + self.button1.frame.size.height){
-            if (finishLocation.y < self.button9.frame.origin.y)
+        if (finishLocation.y > button1.frame.origin.y + button1.frame.size.height){
+            if (finishLocation.y < button9.frame.origin.y)
                 row = 1;
             else
                 row = 2;
@@ -113,8 +107,6 @@
             row = 0;
         int finalValue = (3*row)+column;
         [self markSpot:[self.buttons objectAtIndex:finalValue]];
-        
-        
     }
     else{
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -176,15 +168,10 @@
 }
 
 - (void)resetBoard{
-    [self.button1 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button2 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button3 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button4 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button5 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button6 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button7 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button8 setTitle:@"" forState:(UIControlStateNormal)];
-    [self.button9 setTitle:@"" forState:(UIControlStateNormal)];
+    for (UIButton* button in self.buttons){
+        [button setTitle:@"" forState:(UIControlStateNormal)];
+    }
+
     
     self.boardValues = [NSMutableArray arrayWithObjects:@0,@0,@0,@0,@0,@0,@0,@0,@0,nil];
     [self setTurn:true];

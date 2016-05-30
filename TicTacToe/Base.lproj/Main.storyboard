@@ -246,16 +246,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="button1" destination="NDp-pJ-fsb" id="R6F-z2-tcL"/>
-                        <outlet property="button2" destination="6ge-Hm-UpR" id="Z3j-C1-HRI"/>
-                        <outlet property="button3" destination="pAL-PP-OWX" id="mjg-2e-VGZ"/>
-                        <outlet property="button4" destination="K4S-PS-xcS" id="dba-Lp-Pok"/>
-                        <outlet property="button5" destination="adC-MF-D96" id="SJm-ZY-dcx"/>
-                        <outlet property="button6" destination="Hx0-a1-OwW" id="mIt-ky-Bmp"/>
-                        <outlet property="button7" destination="F4l-St-R99" id="doC-Pb-t3D"/>
-                        <outlet property="button8" destination="u57-jB-bOm" id="xc7-5J-LIg"/>
-                        <outlet property="button9" destination="IoL-Tk-7qZ" id="2ET-Gy-L4q"/>
-                        <outlet property="marker" destination="56X-x7-DGj" id="11U-l4-6PI"/>
+                        <outlet property="marker" destination="56X-x7-DGj" id="65Q-5X-mIJ"/>
                         <outlet property="whichPlayerLabel" destination="XpV-Wn-aZU" id="iIg-IN-Kd1"/>
                         <outletCollection property="buttons" destination="NDp-pJ-fsb" id="d7d-nJ-JC9"/>
                         <outletCollection property="buttons" destination="6ge-Hm-UpR" id="7FO-EE-wrz"/>
