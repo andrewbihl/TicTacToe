@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AutoPlayer.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button1;
@@ -18,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *button7;
 @property (weak, nonatomic) IBOutlet UIButton *button8;
 @property (weak, nonatomic) IBOutlet UIButton *button9;
+@property BOOL facingAI;
+@property AutoPlayer* ai;
 @property (weak, nonatomic) IBOutlet UILabel *marker;
 @property CGPoint markerCenter;
 @property NSArray* buttons;
@@ -26,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
 @property bool firstPlayersTurn;
 @property NSArray* winningSets;
+@property NSTimer* turnTimer;
 
 @end
 
@@ -38,6 +42,9 @@
     //    [self.view addSubview:rectView];
     
     [super viewDidLoad];
+    if (self.facingAI)
+        self.ai = [[AutoPlayer alloc]init];
+    self.navigationItem.title = @"Tic Tac Toe";
     self.buttons = [NSArray arrayWithObjects:self.button1,self.button2,self.button3,self.button4,self.button5,self.button6,self. button7,self.button8,self.button9, nil];
     self.boardValues = [NSMutableArray arrayWithObjects:@0,@0,@0,@0,@0,@0,@0,@0,@0,nil];
     self.winningSets = [self getSetOfWinningSets];
@@ -72,6 +79,10 @@
         self.whichPlayerLabel.text = @"Player 2's Turn";
         self.marker.textColor = [UIColor redColor];
         self.marker.text = @"o";
+        if (self.facingAI)
+            [self.ai makeMove:self.boardValues];
+        
+            
     }
 }
 
@@ -184,6 +195,7 @@
 }
 
 -(void)markSpot:(UIButton*)sender{
+    [self.turnTimer invalidate];
     NSInteger boardIndex = [sender.restorationIdentifier integerValue];
     if ([[self.boardValues objectAtIndex:boardIndex] integerValue] >0)
         return;
@@ -203,7 +215,16 @@
     NSString* winMessage = [self whoWon];
     if (![winMessage isEqualToString:@"No"])
         [self winAlert:winMessage];
+    else
+        self.turnTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(turnTimeOut:) userInfo:nil repeats:false];
 }
 
-@end
+-(void)turnTimeOut:(id)turnTimer{
+    NSLog(@"fire");
+    [self setTurn:(!self.firstPlayersTurn)];
+    self.turnTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(turnTimeOut:) userInfo:nil repeats:false];
+    
+}
 
+
+@end

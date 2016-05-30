@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F3E651F1CF8D51900AC345C /* dragAndDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E651E1CF8D51900AC345C /* dragAndDropView.m */; };
+		2F36D2FE1CFCE67A00C2FA05 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F36D2FD1CFCE67A00C2FA05 /* WebViewController.m */; };
+		2F4462301CFCF19400A7DBD6 /* AutoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F44622F1CFCF19400A7DBD6 /* AutoPlayer.m */; };
 		E6E3D49D1CF77C6100ABB481 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3D49C1CF77C6100ABB481 /* main.m */; };
 		E6E3D4A01CF77C6100ABB481 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3D49F1CF77C6100ABB481 /* AppDelegate.m */; };
 		E6E3D4A31CF77C6100ABB481 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E3D4A21CF77C6100ABB481 /* ViewController.m */; };
@@ -17,8 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F3E651D1CF8D51900AC345C /* dragAndDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dragAndDropView.h; sourceTree = "<group>"; };
-		2F3E651E1CF8D51900AC345C /* dragAndDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dragAndDropView.m; sourceTree = "<group>"; };
+		2F36D2FC1CFCE67A00C2FA05 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		2F36D2FD1CFCE67A00C2FA05 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2F44622E1CFCF19400A7DBD6 /* AutoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoPlayer.h; sourceTree = "<group>"; };
+		2F44622F1CFCF19400A7DBD6 /* AutoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoPlayer.m; sourceTree = "<group>"; };
 		E6E3D4981CF77C6100ABB481 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E3D49C1CF77C6100ABB481 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6E3D49E1CF77C6100ABB481 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +48,10 @@
 		E6E3D48F1CF77C6100ABB481 = {
 			isa = PBXGroup;
 			children = (
+				2F44622E1CFCF19400A7DBD6 /* AutoPlayer.h */,
+				2F44622F1CFCF19400A7DBD6 /* AutoPlayer.m */,
+				2F36D2FC1CFCE67A00C2FA05 /* WebViewController.h */,
+				2F36D2FD1CFCE67A00C2FA05 /* WebViewController.m */,
 				E6E3D49A1CF77C6100ABB481 /* TicTacToe */,
 				E6E3D4991CF77C6100ABB481 /* Products */,
 			);
@@ -66,8 +73,6 @@
 				E6E3D4A11CF77C6100ABB481 /* ViewController.h */,
 				E6E3D4A21CF77C6100ABB481 /* ViewController.m */,
 				E6E3D4A41CF77C6100ABB481 /* Main.storyboard */,
-				2F3E651D1CF8D51900AC345C /* dragAndDropView.h */,
-				2F3E651E1CF8D51900AC345C /* dragAndDropView.m */,
 				E6E3D4A71CF77C6100ABB481 /* Assets.xcassets */,
 				E6E3D4A91CF77C6100ABB481 /* LaunchScreen.storyboard */,
 				E6E3D4AC1CF77C6100ABB481 /* Info.plist */,
@@ -155,9 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E3D4A31CF77C6100ABB481 /* ViewController.m in Sources */,
-				2F3E651F1CF8D51900AC345C /* dragAndDropView.m in Sources */,
+				2F4462301CFCF19400A7DBD6 /* AutoPlayer.m in Sources */,
 				E6E3D4A01CF77C6100ABB481 /* AppDelegate.m in Sources */,
 				E6E3D49D1CF77C6100ABB481 /* main.m in Sources */,
+				2F36D2FE1CFCE67A00C2FA05 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
